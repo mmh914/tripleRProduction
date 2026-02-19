@@ -29,18 +29,7 @@ body {
     Arial,
     sans-serif;
   line-height: 1.6;
-  background:
-    radial-gradient(
-      1200px 600px at 20% -10%,
-      rgba(82, 153, 255, 0.28),
-      transparent 60%
-    ),
-    radial-gradient(
-      900px 500px at 90% 0%,
-      rgba(174, 96, 255, 0.22),
-      transparent 55%
-    ),
-    var(--bg);
+  background: #0f141c;
   color: var(--text);
 }
 
@@ -187,13 +176,20 @@ nav a.active {
 .btn:active {
   transform: translateY(0px);
 }
+h1 {
+  font-weight: 600;
+}
 
+h2 {
+  font-weight: 500;
+}
 /* ===== Card surfaces ===== */
 .surface {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
 }
 
 /* ===== Services / Portfolio grid ===== */
