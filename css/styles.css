@@ -5,6 +5,7 @@
   padding: 0;
 }
 
+/* ===== Theme ===== */
 :root {
   --bg: #0b0d12;
   --surface: rgba(255, 255, 255, 0.06);
@@ -19,6 +20,7 @@
   --max: 1100px;
 }
 
+/* ===== Base ===== */
 body {
   font-family:
     system-ui,
@@ -33,17 +35,6 @@ body {
   color: var(--text);
 }
 
-/* ===== Layout ===== */
-main {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-
-section {
-  padding: 3.5rem 0;
-}
-
 h1,
 h2,
 h3 {
@@ -53,9 +44,11 @@ h3 {
 
 h1 {
   font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 600;
 }
 h2 {
   font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 500;
   margin-bottom: 0.75rem;
 }
 h3 {
@@ -70,6 +63,21 @@ a {
   color: inherit;
 }
 
+/* ===== Layout ===== */
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+section + section {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
 /* ===== Header / Nav ===== */
 header {
   position: sticky;
@@ -80,17 +88,17 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-header > .logo,
-header nav {
-  max-width: var(--max);
-}
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.25rem;
+}
+
+header > .logo,
+header nav {
+  max-width: var(--max);
 }
 
 .logo {
@@ -131,21 +139,6 @@ nav a.active {
   border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
-/* ===== Hero ===== */
-.hero {
-  text-align: left;
-  padding: 4rem 0 3rem;
-}
-
-.hero p {
-  margin-top: 0.85rem;
-  max-width: 60ch;
-}
-
-.hero .btn {
-  margin-top: 1.4rem;
-}
-
 /* ===== Buttons ===== */
 .btn {
   display: inline-flex;
@@ -176,13 +169,7 @@ nav a.active {
 .btn:active {
   transform: translateY(0px);
 }
-h1 {
-  font-weight: 600;
-}
 
-h2 {
-  font-weight: 500;
-}
 /* ===== Card surfaces ===== */
 .surface {
   background: var(--surface);
@@ -190,6 +177,21 @@ h2 {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   backdrop-filter: blur(6px);
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: left;
+  padding: 4rem 0 3rem;
+}
+
+.hero p {
+  margin-top: 0.85rem;
+  max-width: 60ch;
+}
+
+.hero .btn {
+  margin-top: 1.4rem;
 }
 
 /* ===== Services / Portfolio grid ===== */
@@ -212,6 +214,17 @@ h2 {
   border-radius: var(--radius);
   padding: 1.1rem 1.1rem;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.service-grid > div {
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.service-grid > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 .service-grid > div p {
@@ -297,6 +310,8 @@ footer {
   text-align: center;
   font-size: 0.9rem;
 }
+
+/* ===== Media queries ===== */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -316,17 +331,4 @@ footer {
   .logo {
     margin-bottom: 0.75rem;
   }
-}
-.service-grid > div {
-  transition:
-    transform 150ms ease,
-    box-shadow 150ms ease;
-}
-
-.service-grid > div:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
-}
-section + section {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
