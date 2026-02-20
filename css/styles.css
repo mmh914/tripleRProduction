@@ -34,6 +34,7 @@ html {
   --radius: 18px;
   --radius-sm: 12px;
   --max: 1100px;
+  --footer-max: 700px;
 }
 
 /* ===== Base ===== */
@@ -345,12 +346,18 @@ footer {
 }
 
 .footer-content {
-  max-width: var(--max);
+  max-width: var(--footer-max);
   margin: 0 auto 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   align-items: center;
+  width: 100%;
+}
+
+footer > p {
+  max-width: var(--footer-max);
+  margin: 0 auto;
   width: 100%;
 }
 
