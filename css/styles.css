@@ -413,6 +413,11 @@ footer {
 
 /* ===== Portrain Tablet ===== */
 @media (max-width: 1024px) {
+  .footer-socials img {
+    width: 12px;
+    height: 12px;
+  }
+
   main {
     padding: 0 1rem;
   }
@@ -444,6 +449,11 @@ footer {
 
 /* ===== Phone ===== */
 @media (max-width: 650px) {
+  .footer-socials img {
+    width: 18px;
+    height: 18px;
+  }
+
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -469,6 +479,11 @@ footer {
 
 /* ===== iPhone SE etc. ===== */
 @media (max-width: 400px) {
+  .footer-socials img {
+    width: 16px;
+    height: 16px;
+  }
+
   nav {
     display: flex;
     flex-wrap: wrap;
