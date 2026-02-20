@@ -262,6 +262,7 @@ nav a.active {
 .about-box p {
   color: var(--muted-2);
   line-height: 1.75;
+  padding-bottom: 1rem;
 }
 
 /* Make the very-simple service tiles on the homepage look like cards */
