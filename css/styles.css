@@ -462,11 +462,6 @@ footer > p {
   width: 36px;
   height: 36px;
   display: block;
-  filter: brightness(0.9);
-}
-
-.footer-socials a:hover img {
-  filter: brightness(1);
 }
 
 /* ========= Media queries ========= */
