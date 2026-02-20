@@ -79,6 +79,14 @@ html {
 
     --focus: rgba(82, 153, 255, 0.55);
   }
+  .footer-socials img {
+    filter: invert(1) brightness(0.9);
+  }
+
+  .footer-socials a:hover img {
+    filter: invert(1) brightness(1);
+  }
+
 }
 
 /* ===== Base ===== */
@@ -454,11 +462,11 @@ footer > p {
   width: 36px;
   height: 36px;
   display: block;
-  filter: invert(1) brightness(0.9);
+  filter: brightness(0.9);
 }
 
 .footer-socials a:hover img {
-  filter: invert(1) brightness(1);
+  filter: brightness(1);
 }
 
 /* ========= Media queries ========= */
