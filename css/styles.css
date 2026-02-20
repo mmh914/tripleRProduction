@@ -399,8 +399,8 @@ footer {
 }
 
 .footer-socials img {
-  width: 13px;
-  height: 13px;
+  width: 36px;
+  height: 36px;
   display: block;
   filter: invert(1) brightness(0.9);
 }
@@ -414,8 +414,8 @@ footer {
 /* ===== Portrain Tablet ===== */
 @media (max-width: 1024px) {
   .footer-socials img {
-    width: 12px;
-    height: 12px;
+    width: 24px;
+    height: 24px;
   }
 
   main {
