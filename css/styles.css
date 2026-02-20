@@ -301,20 +301,26 @@ nav a.active {
 }
 
 /* ===== About content box ===== */
-
 .about-box {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem 1.75rem;
   box-shadow: var(--shadow-card);
-  max-width: 800px;
+
+  width: 100%;
+  max-width: var(--max);  /* match main site width */
+  margin: 0 auto;         /* center it */
 }
 
 .about-box p {
   color: var(--muted-2);
   line-height: 1.75;
   padding-bottom: 1rem;
+}
+
+.about-box p:last-child {
+  padding-bottom: 0;
 }
 
 /* Make the very-simple service tiles on the homepage look like cards */
